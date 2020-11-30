@@ -9,6 +9,6 @@ eureka:
     fetch-registry: false # registry 为false，标识自己未注册中心
     service-url:
       # 单机配置
-#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
       # 集群配置
-       defaultZone: http://localhost:6001/eureka/,http://localhost:6002/eureka/
+#       defaultZone: http://localhost:6001/eureka/,http://localhost:6002/eureka/

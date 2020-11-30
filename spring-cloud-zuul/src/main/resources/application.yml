@@ -1,0 +1,31 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: cloud-zuul  # eureka上面的application名称
+
+eureka:
+  client:
+    service-url:
+#      defaultZone: http://localhost:6001/eureka/,http://localhost:6002/eureka/,http://localhost:6003/eureka/
+      defaultZone: http://localhost:6003/eureka/
+  instance:
+    instance-id: cloud-zuul   # 修改eureka上的配置信息
+    prefer-ip-address: true
+
+
+
+info:
+  app.name: cloud-zuul
+  company.name: com.liouwb
+  build.artifactId: $project.artifactId$
+  build.version: $project.verson$
+# 路由规则
+zuul:
+  routes:
+    # 服务映射访问名称  cloud-provider  对应 provider
+    provider.serviceId: cloud-provider
+    provider.path: /provider/**
+  # 不能通过服务名访问
+  ignored-services: cloud-provider

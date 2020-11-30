@@ -11,6 +11,8 @@
         <module>spring-cloud-provider</module>
         <module>spring-cloud-consumer</module>
         <module>spring-cloud-eureka-server</module>
+        <module>spring-cloud-hystrix-dashboard</module>
+        <module>spring-cloud-zuul</module>
     </modules>
     <!--打包方式-->
     <packaging>pom</packaging>
@@ -20,7 +22,6 @@
         <spring.cloud.version>Hoxton.SR9</spring.cloud.version>
         <spring.boot.version>2.3.2.RELEASE</spring.boot.version>
         <lombok.version>1.18.16</lombok.version>
-        <hystrix.version>1.4.6.RELEASE</hystrix.version>
     </properties>
 
     <dependencyManagement>
@@ -45,11 +46,6 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-hystrix</artifactId>
-                <version>${hystrix.version}</version>
             </dependency>
 
         </dependencies>
