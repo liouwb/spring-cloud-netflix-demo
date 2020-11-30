@@ -8,7 +8,4 @@
 out
 gen
 spring-cloud-eureka-server/target/*
-spring-cloud-consumer/src/
-spring-cloud-eureka-server/src/test/
-spring-cloud-provider/src/main/java/
-spring-cloud-provider/src/test/
+
