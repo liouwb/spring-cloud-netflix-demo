@@ -1,0 +1,14 @@
+server:
+  port: 6001
+
+eureka:
+  instance:
+    hostname: localhost # eureka服务端的实例名称
+  client:
+    register-with-eureka: false # 是否像服务注册中心注册自己
+    fetch-registry: false # registry 为false，标识自己未注册中心
+    service-url:
+      # 单机配置
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      # 集群配置
+      # defaultZone: http://localhost:6002/eureka/,http://localhost:6003/eureka/
