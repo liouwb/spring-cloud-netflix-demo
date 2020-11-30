@@ -1,5 +1,6 @@
 package com.liouwb.consumer.controller;
 
+import com.liouwb.consumer.service.ProviderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
@@ -23,6 +24,8 @@ public class ConsumerController {
     private RestTemplate restTemplate;
     @Autowired
     private WebClient.Builder clientBuilder;
+    @Autowired
+    private ProviderService providerService;
 
     @GetMapping(value = "get")
     public String get() {
@@ -65,5 +68,16 @@ public class ConsumerController {
                 .retrieve()//请求结果的方法
                 .bodyToMono(String.class)
                 .block();
+    }
+
+    /**
+     * feign 调用provider服务
+     *
+     * @return
+     */
+    @GetMapping(value = "feignProvider")
+    public String feignProvider() {
+
+        return providerService.provider();
     }
 }

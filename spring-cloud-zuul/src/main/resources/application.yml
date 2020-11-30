@@ -28,4 +28,5 @@ zuul:
     provider.serviceId: cloud-provider
     provider.path: /provider/**
   # 不能通过服务名访问
-  ignored-services: cloud-provider
+  ignored-services: *
+  prefix: liouwb
