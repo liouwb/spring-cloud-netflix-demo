@@ -7,5 +7,13 @@
 *.iml
 out
 gen
-spring-cloud-eureka-server/target/*
-
+spring-cloud-eureka-server/target/
+spring-cloud-consumer/src/test/
+spring-cloud-consumer/target/
+spring-cloud-eureka-server/src/test/
+spring-cloud-hystrix-dashboard/src/test/
+spring-cloud-hystrix-dashboard/target/
+spring-cloud-provider/src/test/
+spring-cloud-provider/target/
+spring-cloud-zuul/src/test/
+spring-cloud-zuul/target/
