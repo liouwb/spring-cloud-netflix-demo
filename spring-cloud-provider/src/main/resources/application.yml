@@ -1,5 +1,5 @@
 server:
-  port: 7002
+  port: 7001
 
 spring:
   application:
@@ -8,11 +8,12 @@ spring:
 eureka:
   client:
     service-url:
-#      defaultZone: http://localhost:6001/eureka/,http://localhost:6002/eureka/,http://localhost:6003/eureka/
-      defaultZone: http://localhost:6003/eureka/
+      defaultZone: http://localhost:6001/eureka/,http://localhost:6002/eureka/,http://localhost:6003/eureka/  # eureka集群
+#      defaultZone: http://localhost:6001/eureka/  # eureka地址 eureka单机
   instance:
-    instance-id: cloud-provider-7002   # 修改eureka上的配置信息
+    instance-id: cloud-provider-7001   # 修改eureka上的配置信息
 
+# eureka 点进服务的基本信息
 info:
   app.name: cloud-provider
   company.name: com.liouwb
